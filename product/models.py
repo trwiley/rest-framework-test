@@ -24,3 +24,4 @@ class ProductModel(BaseModel):
     name = models.CharField(max_length=1024, blank=False, null=False)
     description = models.TextField()
     product_number = models.CharField(max_length=1024, blank=False, null=False)
+    price = models.DecimalField(decimal_places=2, max_digits=5, null=False, default=1.0)

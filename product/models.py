@@ -25,3 +25,10 @@ class ProductModel(BaseModel):
     description = models.TextField()
     product_number = models.CharField(max_length=1024, blank=False, null=False)
     price = models.DecimalField(decimal_places=2, max_digits=5, null=False, default=1.0)
+    image = models.ImageField(
+        upload_to="uploads/product_images",
+        height_field=None,
+        width_field=None,
+        max_length=None,
+    )
+    quantity = models.IntegerField()
